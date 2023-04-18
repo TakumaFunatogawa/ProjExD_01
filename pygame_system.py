@@ -13,11 +13,11 @@ def main():
             if event.type == pg.QUIT: return
         
         tmr += 1
-        txt = fonto.render(str(tmr), True, (255, 255-(25.5*(tmr%10)), 255))
+        txt = fonto.render(str(tmr), True, (255-(25.5*(tmr%10)), 255-(25.5*((tmr+3)%10)), 255-(25.5*((tmr+7)%10))))
         screen.fill((0, 0, 0))
         screen.blit(txt, [300, 200])
         pg.display.update()
-        clock.tick(1)
+        clock.tick(10)
 
 
 if __name__ == "__main__":
